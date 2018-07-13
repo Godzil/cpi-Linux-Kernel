@@ -207,15 +207,15 @@ static struct resource axp22x_usb_power_supply_resources[] = {
 
 static struct resource axp22x_pek_resources[] = {
 	{
-		.name   = "PEK_DBR",
-		.start  = AXP22X_IRQ_PEK_RIS_EDGE,
-		.end    = AXP22X_IRQ_PEK_RIS_EDGE,
-		.flags  = IORESOURCE_IRQ,
+		.name	= "PEK_DBR",
+		.start	= AXP22X_IRQ_PEK_SHORT,
+		.end	= AXP22X_IRQ_PEK_SHORT,
+		.flags	= IORESOURCE_IRQ,
 	}, {
-		.name   = "PEK_DBF",
-		.start  = AXP22X_IRQ_PEK_FAL_EDGE,
-		.end    = AXP22X_IRQ_PEK_FAL_EDGE,
-		.flags  = IORESOURCE_IRQ,
+		.name	= "PEK_DBF",
+		.start	= AXP22X_IRQ_PEK_LONG,
+		.end	= AXP22X_IRQ_PEK_LONG,
+		.flags	= IORESOURCE_IRQ,
 	},
 };
 

@@ -256,6 +256,10 @@ static int sun8i_codec_hw_params(struct snd_pcm_substream *substream,
 			   SUN8I_SYS_SR_CTRL_AIF2_FS_MASK,
 			   sample_rate << SUN8I_SYS_SR_CTRL_AIF2_FS);
 
+	regmap_update_bits(scodec->regmap, SUN8I_DAC_MXR_SRC, 0x8800, 0x8800);
+	regmap_update_bits(scodec->regmap, 0x58, 0xffff, 0xa0a0);
+	regmap_update_bits(scodec->regmap, 0x124, 0xffff, 0xa0a0);
+
 	return 0;
 }
 

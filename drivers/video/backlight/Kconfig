@@ -150,6 +150,12 @@ config LCD_HX8357
 	  If you have a HX-8357 LCD panel, say Y to enable its LCD control
 	  driver.
 
+config LCD_KD027
+	tristate "STARTEK KD027 LCD Driver"
+	help
+	  If you have a KD027 LCD panel, say Y to enable its LCD control
+	  driver.
+
 endif # LCD_CLASS_DEVICE
 
 #
@@ -466,6 +472,12 @@ config BACKLIGHT_ARCXCNN
 	help
 	  If you have an ARCxCnnnn family backlight say Y to enable
 	  the backlight driver.
+
+config BACKLIGHT_OCP8178
+	tristate "OCP8178 Backlight Driver"
+	depends on GPIOLIB
+	help
+	  If you have an OCP8178, say Y to enable the backlight driver.
 
 endif # BACKLIGHT_CLASS_DEVICE
 

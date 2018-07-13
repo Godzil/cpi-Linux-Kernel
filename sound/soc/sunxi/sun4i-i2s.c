@@ -484,6 +484,7 @@ static int sun4i_i2s_set_fmt(struct snd_soc_dai *dai, unsigned int fmt)
 		default:
 			return -EINVAL;
 		}
+		val = SUN4I_I2S_CTRL_MODE_MASTER;
 		regmap_update_bits(i2s->regmap, SUN4I_I2S_CTRL_REG,
 				   SUN4I_I2S_CTRL_MODE_MASK,
 				   val);
